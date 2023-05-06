@@ -57,6 +57,8 @@ function game() {
     return playerScore + " - " + computerScore;
 }
 
+let score = game();
+console.log(score);
 
 
 /** 
