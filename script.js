@@ -35,16 +35,17 @@ function play(playerSelection, computerSelection) {
     }
 }
 
-let playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
-let computerSelection = getComputerChoice();
-
-let result = play(playerSelection, computerSelection);
-
 function game() {
     let playerScore = 0;
     let computerScore = 0;
 
     for (let round = 0; round <=5; round++) {
+
+        let playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
+        let computerSelection = getComputerChoice();
+        let result = play(playerSelection, computerSelection);
+        console.log(result);
+
         if (result === "Tie Game!") {
         
         } else if (result === "You Win!") {
@@ -60,8 +61,3 @@ function game() {
 let score = game();
 console.log(score);
 
-
-/** 
-console.log(result);
-
-*/ 
