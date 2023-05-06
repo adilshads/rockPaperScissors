@@ -1,7 +1,7 @@
 function getComputerChoice() {
-    let r = "Rock";
-    let p = "Paper";
-    let s = "Scissors";
+    let r = "ROCKk";
+    let p = "PAPER";
+    let s = "SCISSORS";
     let randomInterger = Math.floor(Math.random() * 3) + 1;
 
     if (randomInterger === 1) {
@@ -12,3 +12,14 @@ function getComputerChoice() {
         return s;
     }
 }
+
+/** 
+function rockPaperScissors(playerelection, computerSelection) {
+    let computerSelection = getComputerChoice;
+    let playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
+
+    if (computerSelection =)
+}
+
+*/
+
