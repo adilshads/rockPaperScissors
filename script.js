@@ -44,7 +44,7 @@ function game(rounds5) {
     let playerScore = 0;
     let computerScore = 0;
 
-    for (let round = 0; i <=5; i++) {
+    for (let round = 0; round <=5; round++) {
         if (rounds5 === "Tie Game!") {
             continue;
         } else if (rounds5 === "You Win!") {
