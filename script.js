@@ -1,3 +1,7 @@
+/** Create a function that prompts the computer to randomly generate an answer between Rock,
+ * Paper and Scissors
+ */
+
 function getComputerChoice() {
     let r = "ROCK";
     let p = "PAPER";
@@ -13,6 +17,9 @@ function getComputerChoice() {
     }
 }
 
+/**Create a function that compares the user generated choice and computer choice, 
+ * the function then declares a winner, loser or tie
+ */
 function play(playerSelection, computerSelection) {
     if (computerSelection === "ROCK" && playerSelection === "ROCK") {
         return "Tie Game!";
@@ -35,6 +42,7 @@ function play(playerSelection, computerSelection) {
     }
 }
 
+/** Create a function that repeats for 5 rounds and declares the score at the end */
 function game() {
     let playerScore = 0;
     let computerScore = 0;
