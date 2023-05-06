@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    let r = "ROCKk";
+    let r = "ROCK";
     let p = "PAPER";
     let s = "SCISSORS";
     let randomInterger = Math.floor(Math.random() * 3) + 1;
@@ -13,11 +13,7 @@ function getComputerChoice() {
     }
 }
 
-
-function rockPaperScissors(playerSelection, computerSelection) {
-    let computerSelection = getComputerChoice();
-    let playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
-
+function play(playerSelection, computerSelection) {
     if (computerSelection === "ROCK" && playerSelection === "ROCK") {
         return "Tie Game!";
     } else if (computerSelection === "ROCK" && playerSelection === "PAPER") {
@@ -38,3 +34,12 @@ function rockPaperScissors(playerSelection, computerSelection) {
         return "You Lose!";
     }
 }
+
+let playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
+let computerSelection = getComputerChoice();
+
+let result = play(playerSelection, computerSelection);
+console.log(result);
+
+
+
