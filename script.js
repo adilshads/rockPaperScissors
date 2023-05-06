@@ -40,14 +40,14 @@ let computerSelection = getComputerChoice();
 
 let result = play(playerSelection, computerSelection);
 
-function game(rounds5) {
+function game() {
     let playerScore = 0;
     let computerScore = 0;
 
     for (let round = 0; round <=5; round++) {
-        if (rounds5 === "Tie Game!") {
+        if (result === "Tie Game!") {
             continue;
-        } else if (rounds5 === "You Win!") {
+        } else if (result === "You Win!") {
             playerScore++;
             return playerScore + " - " + computerScore;
         } else {
@@ -57,7 +57,6 @@ function game(rounds5) {
     }
 }
 
-let rounds5 = result;
 let score = play();
 console.log(score)
 
