@@ -46,19 +46,17 @@ function game() {
 
     for (let round = 0; round <=5; round++) {
         if (result === "Tie Game!") {
-            continue;
+        
         } else if (result === "You Win!") {
             playerScore++;
-            return playerScore + " - " + computerScore;
         } else {
             computerScore++;
-            return playerScore + " - " + computerScore;
         } 
     }
+
+    return playerScore + " - " + computerScore;
 }
 
-let score = play();
-console.log(score)
 
 
 /** 
