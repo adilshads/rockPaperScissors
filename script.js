@@ -13,13 +13,28 @@ function getComputerChoice() {
     }
 }
 
-/** 
-function rockPaperScissors(playerelection, computerSelection) {
+
+function rockPaperScissors(playerSelection, computerSelection) {
     let computerSelection = getComputerChoice;
     let playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
 
-    if (computerSelection =)
+    if (computerSelection === "ROCK" && playerSelection === "ROCK"); {
+        return "Tie Game!";
+    } else if (computerSelection === "ROCK" && playerSelection === "PAPER"); {
+        return "You Win!";
+    } else if (computerSelection === "ROCK" && playerSelection === "SCISSORS"); {
+        return "You Lose!";
+    } else if (computerSelection === "PAPER" && playerSelection === "PAPER"); {
+        return "Tie Game!";
+    } else if (computerSelection === "PAPER" && playerSelection === "SCISSORS"); {
+        return "You Win!";
+    } else if (computerSelection === "PAPER" && playerSelection === "ROCK"); {
+        return "You Lose!";
+    } else if (computerSelection === "SCISSORS" && playerSelection === "SCISSORS"); {
+        return "Tie Game!";
+    } else if (computerSelection === "SCISSORS" && playerSelection === "ROCK"); {
+        return "You Win!";
+    } else if (computerSelection === "SCISSORS" && playerSelection === "PAPER"); {
+        return "You Lose!";
+    }
 }
-
-*/
-
