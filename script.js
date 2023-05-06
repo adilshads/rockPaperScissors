@@ -39,7 +39,30 @@ let playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
 let computerSelection = getComputerChoice();
 
 let result = play(playerSelection, computerSelection);
+
+function game(rounds5) {
+    let playerScore = 0;
+    let computerScore = 0;
+
+    for (let round = 0; i <=5; i++) {
+        if (rounds5 === "Tie Game!") {
+            continue;
+        } else if (rounds5 === "You Win!") {
+            playerScore++;
+            return playerScore + " - " + computerScore;
+        } else {
+            computerScore++;
+            return playerScore + " - " + computerScore;
+        } 
+    }
+}
+
+let rounds5 = result;
+let score = play();
+console.log(score)
+
+
+/** 
 console.log(result);
 
-
-
+*/ 
