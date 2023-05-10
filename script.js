@@ -45,37 +45,68 @@ function play(playerSelection, computerSelection) {
     }
 }
 
+const container = document.querySelector('#container');
+
+/**Button for player option "ROCK" */
+const rockButton = document.createElement('button');
+rockButton.textContent = 'ROCK';
+rockButton.addEventListener('click', function() {
+    const computerSelection = getComputerChoice();
+    play('ROCK', computerSelection);
+    console.log('Player chooses ROCK!');
+});
+container.appendChild(rockButton);
+
+/**Button for player option "PAPER" */
+const paperButton = document.createElement('button');
+paperButton.textContent = 'PAPER';
+paperButton.addEventListener('click', function() {
+    const computerSelection = getComputerChoice();
+    play('PAPER', computerSelection)
+    console.log('Player chooses PAPER!');
+});
+container.appendChild(paperButton);
+
+/**Button for player option "SCISSORS" */
+const scissorsButton = document.createElement('button');
+scissorsButton.textContent = 'SCISSORS';
+scissorsButton.addEventListener('click', function() {
+    const computerSelection = getComputerChoice();
+    play('SCISSORS', computerSelection)
+    console.log('Player chooses SCISSORS!');
+});
+container.appendChild(scissorsButton);
 
 
 /** Create a function that repeats for 5 rounds and declares the score at the end */
-//function game() { 
+function game() { 
     /** Declares 2 variables to act as scorekeepers */
-//    let playerScore = 0;
-//    let computerScore = 0;
+    let playerScore = 0;
+    let computerScore = 0;
     /** 'round' variable acts as a counter for the function to max out at 5 iterations */
-//    for (let round = 0; round <=5; round++) {
+    for (let round = 0; round <=5; round++) {
         /** Declare 3 variable: 'playerSelection' is user generated, and 'computerSelection' is pulled 
          * from prior function. 'result' is used to call the play() function and generate a winner
          * for the round. At the end of each round the score is updated. 
          */
-//        let playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
-//        let computerSelection = getComputerChoice();
-//        let result = play(playerSelection, computerSelection);
-//        console.log(result);
+        let playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
+        let computerSelection = getComputerChoice();
+        let result = play(playerSelection, computerSelection);
+        console.log(result);
 
-//        if (result === "Tie Game!") {
+        if (result === "Tie Game!") {
         
-//        } else if (result === "You Win!") {
-//            playerScore++;
-//        } else {
-//            computerScore++;
-//        } 
-//    }
+        } else if (result === "You Win!") {
+            playerScore++;
+        } else {
+            computerScore++;
+        } 
+    }
 
-//    return playerScore + " - " + computerScore;
-//}
+    return playerScore + " - " + computerScore;
+}
 
 /** Returns winner of game */
-//let score = game();
-//console.log(score);
+let score = game();
+console.log(score);
 
