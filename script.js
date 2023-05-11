@@ -73,13 +73,14 @@ scissorsButton.addEventListener('click', function() {
 container.appendChild(scissorsButton);
 
 
+
 /** Create a function that repeats for 5 rounds and declares the score at the end */
 function game() { 
     /** Declares 2 variables to act as scorekeepers */
     let playerScore = 0;
     let computerScore = 0;
     /** 'round' variable acts as a counter for the function to max out at 5 iterations */
-    for (let round = 0; round <=5; round++) {
+    for (let round = 1; round <= 5; round++) {
         /** Declare 3 variable: 'playerSelection' is user generated, and 'computerSelection' is pulled 
          * from prior function. 'result' is used to call the play() function and generate a winner
          * for the round. At the end of each round the score is updated. 
@@ -100,6 +101,7 @@ function game() {
 
     return playerScore + " - " + computerScore;
 }
+
 
 /** Returns winner of game */
 let score = game();
