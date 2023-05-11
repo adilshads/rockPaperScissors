@@ -92,7 +92,7 @@ function game() {
          * from prior function. 'result' is used to call the play() function and generate a winner
          * for the round. At the end of each round the score is updated. 
          */
-        let playerSelection = prompt("Rock, Paper, Scissors?").toUpperCase();
+        let playerSelection = ("Rock, Paper, Scissors?").toUpperCase();
         let computerSelection = getComputerChoice();
         let result = play(playerSelection, computerSelection);
         console.log(result);
