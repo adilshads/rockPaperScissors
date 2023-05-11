@@ -45,14 +45,6 @@ function playerButtonClick(playerSelection) {
     console.log(result);
 }
 
-function handleButtonClick(playerSelection) {
-    return function () {
-      const computerSelection = getComputerChoice();
-      const result = play(playerSelection, computerSelection);
-      console.log(result);
-    };
-  }
-
 /**Button for player option "ROCK" */
 const rockButton = document.createElement('button');
 rockButton.textContent = 'ROCK';
