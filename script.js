@@ -45,7 +45,7 @@ function playerButtonClick(playerSelection) {
     console.log(result);
 }
 
-/**Button for player option "ROCK" */
+/** Button for player option "ROCK" */
 const rockButton = document.createElement('button');
 rockButton.textContent = 'ROCK';
 rockButton.addEventListener('click', function() {
@@ -54,7 +54,7 @@ rockButton.addEventListener('click', function() {
 });
 container.appendChild(rockButton);
 
-/**Button for player option "PAPER" */
+/** Button for player option "PAPER" */
 const paperButton = document.createElement('button');
 paperButton.textContent = 'PAPER';
 paperButton.addEventListener('click', function() {
@@ -63,7 +63,7 @@ paperButton.addEventListener('click', function() {
 });
 container.appendChild(paperButton);
 
-/**Button for player option "SCISSORS" */
+/** Button for player option "SCISSORS" */
 const scissorsButton = document.createElement('button');
 scissorsButton.textContent = 'SCISSORS';
 scissorsButton.addEventListener('click', function() {
@@ -72,7 +72,16 @@ scissorsButton.addEventListener('click', function() {
 });
 container.appendChild(scissorsButton);
 
+/** Button for starting game */
+const startButton = document.createElement('button');
+startButton.textContent = 'Start Game';
+startButton.addEventListener('click', function() {
+    let score = game(); 
+    console.log(score);
+});
 
+// Append the start button to the container
+container.appendChild(startButton);
 
 /** Create a function that repeats for 5 rounds and declares the score at the end */
 function game() { 
@@ -101,9 +110,4 @@ function game() {
 
     return playerScore + " - " + computerScore;
 }
-
-
-/** Returns winner of game */
-let score = game();
-console.log(score);
 
