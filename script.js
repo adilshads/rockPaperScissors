@@ -24,35 +24,40 @@ function getComputerChoice() {
  * the function then declares a winner, loser or tie
  */
 function play(playerSelection, computerSelection) {
-    if (computerSelection === "ROCK" && playerSelection === "ROCK") {
-        return "Tie Game!";
-    } else if (computerSelection === "ROCK" && playerSelection === "PAPER") {
-        return "You Win!";
-    } else if (computerSelection === "ROCK" && playerSelection === "SCISSORS") {
-        return "You Lose!";
-    } else if (computerSelection === "PAPER" && playerSelection === "PAPER") {
-        return "Tie Game!";
-    } else if (computerSelection === "PAPER" && playerSelection === "SCISSORS") {
-        return "You Win!";
-    } else if (computerSelection === "PAPER" && playerSelection === "ROCK") {
-        return "You Lose!";
-    } else if (computerSelection === "SCISSORS" && playerSelection === "SCISSORS") {
-        return "Tie Game!";
-    } else if (computerSelection === "SCISSORS" && playerSelection === "ROCK") {
-        return "You Win!";
-    } else if (computerSelection === "SCISSORS" && playerSelection === "PAPER") {
-        return "You Lose!";
+    if (computerSelection === playerSelection) {
+      return "Tie game!";
+    } else if (
+      (computerSelection === "ROCK" && playerSelection === "SCISSORS") ||
+      (computerSelection === "PAPER" && playerSelection === "ROCK") ||
+      (computerSelection === "SCISSORS" && playerSelection === "PAPER")
+    ) {
+      return "You lose!";
+    } else {
+      return "You win!";
     }
 }
 
 const container = document.querySelector('#container');
 
+function playerButtonClick(playerSelection) {
+    const computerSelection = getComputerChoice();
+    const result = play(playerSelection, computerSelection);
+    console.log(result);
+}
+
+function handleButtonClick(playerSelection) {
+    return function () {
+      const computerSelection = getComputerChoice();
+      const result = play(playerSelection, computerSelection);
+      console.log(result);
+    };
+  }
+
 /**Button for player option "ROCK" */
 const rockButton = document.createElement('button');
 rockButton.textContent = 'ROCK';
 rockButton.addEventListener('click', function() {
-    const computerSelection = getComputerChoice();
-    play('ROCK', computerSelection);
+    playerButtonClick("ROCK");
     console.log('Player chooses ROCK!');
 });
 container.appendChild(rockButton);
@@ -61,8 +66,7 @@ container.appendChild(rockButton);
 const paperButton = document.createElement('button');
 paperButton.textContent = 'PAPER';
 paperButton.addEventListener('click', function() {
-    const computerSelection = getComputerChoice();
-    play('PAPER', computerSelection)
+    playerButtonClick("PAPER");
     console.log('Player chooses PAPER!');
 });
 container.appendChild(paperButton);
@@ -71,8 +75,7 @@ container.appendChild(paperButton);
 const scissorsButton = document.createElement('button');
 scissorsButton.textContent = 'SCISSORS';
 scissorsButton.addEventListener('click', function() {
-    const computerSelection = getComputerChoice();
-    play('SCISSORS', computerSelection)
+    playerButtonClick("SCISSORS");
     console.log('Player chooses SCISSORS!');
 });
 container.appendChild(scissorsButton);
