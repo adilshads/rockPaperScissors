@@ -51,6 +51,36 @@ function playerButtonClick(playerSelection) {
     console.log(result);
 }
 
+/** Keeps tab of the players score */
+let playerScore = 0;
+
+function updatePlayerScore(result) {
+    if (result === "You win!") {
+        playerScore += 1; 
+    }
+    return playerScore;
+}
+
+let computerScore = 0;
+
+/** Keeps tabs of the computers score */
+function updateComputerScore(result) {
+    if (result === "You win!") {
+        computerScore += 1; 
+    }
+    return computerScore;
+}
+
+/** Keeps tabs of the number of rounds */
+let currentRound = 0;
+
+function updateRound() {
+  currentRound++;
+  return currentRound;
+}
+
+
+function 
 /** Button for player option "ROCK" */
 const rockButton = document.createElement('button');
 rockButton.textContent = 'ROCK';
