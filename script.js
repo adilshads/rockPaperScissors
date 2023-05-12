@@ -79,10 +79,10 @@ startButton.addEventListener('click', function() {
     let score = game(); 
     console.log(score);
 });
-
-// Append the start button to the container
 container.appendChild(startButton);
 
+
+/** 
 /** Create a function that repeats for 5 rounds and declares the score at the end */
 function game() { 
     /** Declares 2 variables to act as scorekeepers */
@@ -93,7 +93,7 @@ function game() {
         /** Declare 3 variable: 'playerSelection' is user generated, and 'computerSelection' is pulled 
          * from prior function. 'result' is used to call the play() function and generate a winner
          * for the round. At the end of each round the score is updated. 
-         */
+         
         let playerSelection = ("Rock, Paper, Scissors?").toUpperCase();
         let computerSelection = getComputerChoice();
         let result = play(playerSelection, computerSelection);
@@ -110,4 +110,4 @@ function game() {
 
     return playerScore + " - " + computerScore;
 }
-
+*/
