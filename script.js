@@ -81,8 +81,11 @@ function updateScoreAndCheckWinner(result) {
         console.log("It's a tie in the group of 5 rounds!");
       }
       
-      playerScore = 0;
-      computerScore = 0;
+    console.log(`Player Score: ${playerScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+
+    playerScore = 0;
+    computerScore = 0;
     }
   }
 
