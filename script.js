@@ -72,7 +72,7 @@ scissorsButton.addEventListener('click', function() {
 });
 container.appendChild(scissorsButton);
 
-/** Button for starting game */
+/** Button for starting game 
 const startButton = document.createElement('button');
 startButton.textContent = 'Start Game';
 startButton.addEventListener('click', function() {
@@ -81,6 +81,7 @@ startButton.addEventListener('click', function() {
 });
 container.appendChild(startButton);
 
+*/
 
 /** 
 /** Create a function that repeats for 5 rounds and declares the score at the end */
