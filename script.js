@@ -55,9 +55,27 @@ function playerButtonClick(playerSelection) {
 
 /** Displays the score of the player and the computer after every round */
 function displayScore() {
+    document.getElementById("result").textContent = "Player Score: " + playerScore;
+    document.getElementById("result").textContent += " Computer Score: " + computerScore;
+    console.log(`Player Score: ${playerScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+
+    if (currentRound % 5 === 0) {
+      if (playerScore > computerScore) {
+        document.getElementById("result").textContent = "You Win, You May Proceed!";
+        console.log("Player Wins!");
+      } else if (playerScore < computerScore) {
+        document.getElementById("result").textContent = "You Lose, Try Again!";
+        console.log("Computer Wins!");
+      } else {
+        document.getElementById("result").textContent = "It's a Tie, Try Again!";
+        console.log("It's a Tie!");
+      }
+      
     console.log(`Player Score: ${playerScore}`);
     console.log(`Computer Score: ${computerScore}`);
   }
+}
 
 /** Keeps track of player score and computer score then declares a winner every 5 rounds */ 
 let playerScore = 0;
