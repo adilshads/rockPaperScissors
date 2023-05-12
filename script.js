@@ -20,7 +20,7 @@ function getComputerChoice() {
     }
 }
 
-/**Create a function that compares the user generated choice and computer choice, 
+/** Create a function that compares the user generated choice and computer choice, 
  * the function then declares a winner, loser or tie
  */
 function play(playerSelection, computerSelection) {
@@ -53,12 +53,13 @@ function playerButtonClick(playerSelection) {
     displayScore();
 }
 
-
+/** Displays the score of the player and the computer after every round */
 function displayScore() {
     console.log(`Player Score: ${playerScore}`);
     console.log(`Computer Score: ${computerScore}`);
   }
 
+/** Keeps track of player score and computer score then declares a winner every 5 rounds */ 
 let playerScore = 0;
 let computerScore = 0;
 let currentRound = 0;
