@@ -79,36 +79,6 @@ function updateScoreAndCheckWinner(result) {
     }
   }
 
-/** Keeps tab of the players score 
-let playerScore = 0;
-
-function updatePlayerScore(result) {
-    if (result === "You win!") {
-        playerScore += 1; 
-    }
-    return playerScore;
-}
-*/
-
-/** Keeps tabs of the computers score 
-let computerScore = 0;
-
-function updateComputerScore(result) {
-    if (result === "You win!") {
-        computerScore += 1; 
-    }
-    return computerScore;
-}
-*/
-/** Keeps tabs of the number of rounds 
-let currentRound = 0;
-
-function updateRound() {
-  currentRound++;
-  return currentRound;
-}
-*/
-
 /** Button for player option "ROCK" */
 const rockButton = document.createElement('button');
 rockButton.textContent = 'ROCK';
