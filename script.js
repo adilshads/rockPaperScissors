@@ -49,9 +49,37 @@ function playerButtonClick(playerSelection) {
     const computerSelection = getComputerChoice();
     const result = play(playerSelection, computerSelection);
     console.log(result);
+    return updateScoreAndCheckWinner(result);
 }
 
-/** Keeps tab of the players score */
+let playerScore = 0;
+let computerScore = 0;
+let currentRound = 0;
+
+function updateScoreAndCheckWinner(result) {
+    if (result === "You win!") {
+      playerScore++;
+    } else if (result === "You lose!") {
+      computerScore++;
+    }
+  
+    currentRound++;
+    
+    if (currentRound % 5 === 0) {
+      if (playerScore > computerScore) {
+        console.log("Player wins the group of 5 rounds!");
+      } else if (playerScore < computerScore) {
+        console.log("Computer wins the group of 5 rounds!");
+      } else {
+        console.log("It's a tie in the group of 5 rounds!");
+      }
+      
+      playerScore = 0;
+      computerScore = 0;
+    }
+  }
+
+/** Keeps tab of the players score 
 let playerScore = 0;
 
 function updatePlayerScore(result) {
@@ -60,27 +88,27 @@ function updatePlayerScore(result) {
     }
     return playerScore;
 }
+*/
 
+/** Keeps tabs of the computers score 
 let computerScore = 0;
 
-/** Keeps tabs of the computers score */
 function updateComputerScore(result) {
     if (result === "You win!") {
         computerScore += 1; 
     }
     return computerScore;
 }
-
-/** Keeps tabs of the number of rounds */
+*/
+/** Keeps tabs of the number of rounds 
 let currentRound = 0;
 
 function updateRound() {
   currentRound++;
   return currentRound;
 }
+*/
 
-
-function 
 /** Button for player option "ROCK" */
 const rockButton = document.createElement('button');
 rockButton.textContent = 'ROCK';
