@@ -4,7 +4,8 @@ Create a Rock Paper Scissors Game!
 
 # motivation 
 
-Learn to create and a webpage integrated with javascript
+Learn to create and a webpage integrated with JavaScript by creating an interactive 
+game for user.
 
 # Build Status
 
