@@ -49,8 +49,15 @@ function playerButtonClick(playerSelection) {
     const computerSelection = getComputerChoice();
     const result = play(playerSelection, computerSelection);
     console.log(result);
-    return updateScoreAndCheckWinner(result);
+    updateScoreAndCheckWinner(result);
+    displayScore();
 }
+
+
+function displayScore() {
+    console.log(`Player Score: ${playerScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+  }
 
 let playerScore = 0;
 let computerScore = 0;
