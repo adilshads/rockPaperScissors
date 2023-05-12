@@ -37,8 +37,14 @@ function play(playerSelection, computerSelection) {
     }
 }
 
+/** Selects the HTML element with the id container and stores it in the container 
+ * variable. It provides a convenient way to access and manipulate the container 
+ * element in the code. */
 const container = document.querySelector('#container');
 
+/* Takes value player selection according to the button the user clicked, then 
+runs the play() function to compare the choice to the computerSelection and 
+declare who won the round */ 
 function playerButtonClick(playerSelection) {
     const computerSelection = getComputerChoice();
     const result = play(playerSelection, computerSelection);
