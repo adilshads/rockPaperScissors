@@ -75,11 +75,14 @@ function updateScoreAndCheckWinner(result) {
     
     if (currentRound % 5 === 0) {
       if (playerScore > computerScore) {
-        console.log("Player wins the group of 5 rounds!");
+        document.getElementById("result").textContent = "You Win, You May Proceed!";
+        console.log("Player Wins!");
       } else if (playerScore < computerScore) {
-        console.log("Computer wins the group of 5 rounds!");
+        document.getElementById("result").textContent = "You Lose, Try Again!";
+        console.log("Computer Wins!");
       } else {
-        console.log("It's a tie in the group of 5 rounds!");
+        document.getElementById("result").textContent = "It's a Tie, Try Again!";
+        console.log("It's a Tie!");
       }
       
     console.log(`Player Score: ${playerScore}`);
