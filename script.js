@@ -57,27 +57,25 @@ function playerButtonClick(playerSelection) {
 function displayScore(playerSelection, computerSelection) {
   document.getElementById("result").textContent = "Player Score: " + playerScore;
   document.getElementById("result").textContent += " Computer Score: " + computerScore;
-  document.getElementById("result").textContent += " Player Choice: " + playerSelection;
-  document.getElementById("result").textContent += " Computer Choice: " + computerSelection;
   console.log(`Player Score: ${playerScore}`);
   console.log(`Computer Score: ${computerScore}`);
-  console.log(`Player Choice: ${playerSelection}`);
-  console.log(`Computer Choice: ${computerSelection}`);
 
-  if (currentRound % 5 === 0) {
+  if (currentRound % 5 === 0 && currentRound !== 0) {
     if (playerScore > computerScore) {
-      document.getElementById("result").textContent = "You Win, You May Proceed!";
+      document.getElementById("result").textContent = "You Win, You May Proceed! Player Choice: " + playerSelection + " Computer Choice: " + computerSelection;
       console.log("Player Wins!");
     } else if (playerScore < computerScore) {
-      document.getElementById("result").textContent = "You Lose, Try Again!";
+      document.getElementById("result").textContent = "You Lose, Try Again! Player Choice: " + playerSelection + " Computer Choice: " + computerSelection;
       console.log("Computer Wins!");
     } else {
-      document.getElementById("result").textContent = "It's a Tie, Try Again!";
+      document.getElementById("result").textContent = "It's a Tie, Try Again! Player Choice: " + playerSelection + " Computer Choice: " + computerSelection;
       console.log("It's a Tie!");
     }
-  } else if (currentRound > 0 && playerScore === computerScore) {
-    document.getElementById("result").textContent = "Tie!";
-    console.log("Tie!");
+  } else {
+    document.getElementById("result").textContent += " Player Choice: " + playerSelection;
+    document.getElementById("result").textContent += " Computer Choice: " + computerSelection;
+    console.log(`Player Choice: ${playerSelection}`);
+    console.log(`Computer Choice: ${computerSelection}`);
   }
 }
 
