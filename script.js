@@ -62,13 +62,22 @@ function displayScore(playerSelection, computerSelection) {
 
   if (currentRound % 5 === 0 && currentRound !== 0) {
     if (playerScore > computerScore) {
-      document.getElementById("result").textContent = "You Win, You May Proceed! Player Choice: " + playerSelection + " Computer Choice: " + computerSelection + " - Final Score: Player Score - " + playerScore.toString() + " Computer Score - " + computerScore.toString();
+      document.getElementById("result").textContent = "You Win, You May Proceed! Player Choice: " +
+      playerSelection + " Computer Choice: " + computerSelection +
+      " - Final Score: Player Score - " + playerScore.toString() +
+      " Computer Score - " + computerScore.toString();
       console.log("Player Wins!");
     } else if (playerScore < computerScore) {
-      document.getElementById("result").textContent = "You Lose, Try Again! Player Choice: " + playerSelection + " Computer Choice: " + computerSelection + " - Final Score: Player Score - " + playerScore.toString() + " Computer Score - " + computerScore.toString();
+      document.getElementById("result").textContent = "You Lose, Try Again! Player Choice: " +
+      playerSelection + " Computer Choice: " + computerSelection +
+      " - Final Score: Player Score - " + playerScore.toString() +
+      " Computer Score - " + computerScore.toString();
       console.log("Computer Wins!");
     } else {
-      document.getElementById("result").textContent = "It's a Tie, Try Again! Player Choice: " + playerSelection + " Computer Choice: " + computerSelection + " - Final Score: Player Score - " + playerScore.toString() + " Computer Score - " + computerScore.toString();
+      document.getElementById("result").textContent = "It's a Tie, Try Again! Player Choice: " +
+      playerSelection + " Computer Choice: " + computerSelection +
+      " - Final Score: Player Score - " + playerScore.toString() +
+      " Computer Score - " + computerScore.toString();
       console.log("It's a Tie!");
     }
   } else {
