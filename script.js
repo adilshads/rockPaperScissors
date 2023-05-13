@@ -50,15 +50,19 @@ function playerButtonClick(playerSelection) {
   const result = play(playerSelection, computerSelection);
   console.log(result);
   updateScoreAndCheckWinner(result);
-  displayScore();
+  displayScore(playerSelection, computerSelection);
 }
 
 /** Displays the score of the player and the computer after every round */
-function displayScore() {
+function displayScore(playerSelection, computerSelection) {
   document.getElementById("result").textContent = "Player Score: " + playerScore;
   document.getElementById("result").textContent += " Computer Score: " + computerScore;
+  document.getElementById("result").textContent += " Player Choice: " + playerSelection;
+  document.getElementById("result").textContent += " Computer Choice: " + computerSelection;
   console.log(`Player Score: ${playerScore}`);
   console.log(`Computer Score: ${computerScore}`);
+  console.log(`Player Choice: ${playerSelection}`);
+  console.log(`Computer Choice: ${computerSelection}`);
 
   if (currentRound % 5 === 0) {
     if (playerScore > computerScore) {
