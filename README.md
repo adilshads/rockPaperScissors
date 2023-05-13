@@ -85,14 +85,19 @@ rockButton.textContent = 'ROCK';
 # Credits
 ![Beautiful Door](https://unsplash.com/@alexander_tsang?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-Image credit: [Alexander Tsang](https://unsplash.com/@alexander_tsang)
+Image Credit: [Alexander Tsang](https://unsplash.com/@alexander_tsang)
 
 ![Rock] (https://pixabay.com/photos/rock-erosion-scenery-landscape-5352025/)
 
-Image credit: [Dimitris Vetsikas] (https://pixabay.com/users/dimitrisvetsikas1969-1857980/)
+Image Credit: [Dimitris Vetsikas] (https://pixabay.com/users/dimitrisvetsikas1969-1857980/)
 
 ![Paper](https://pixabay.com/photos/certificate-contract-document-proof-3177946/)
 Image Credit: [G.C.] (https://pixabay.com/users/garten-gg-201217/)
+
+![Scissors](https://unsplash.com/photos/i0ROGKijuek)
+
+Image Credit: [Everyday basics](https://unsplash.com/@zanardi)
+
 
 # License
 
