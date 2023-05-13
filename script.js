@@ -116,6 +116,7 @@ function resetGame() {
   computerScore = 0;
   currentRound = 0;
   displayScore(); // Update the score display after resetting
+  document.getElementById("result").textContent = "New Match!";
 }
 
 /** Button for player option "ROCK" */
