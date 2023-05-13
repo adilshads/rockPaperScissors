@@ -87,6 +87,10 @@ rockButton.textContent = 'ROCK';
 
 Image credit: [Alexander Tsang](https://unsplash.com/@alexander_tsang)
 
+![Rock] (https://pixabay.com/photos/rock-erosion-scenery-landscape-5352025/)
+
+Image credit: [Dimitris Vetsikas] (https://pixabay.com/users/dimitrisvetsikas1969-1857980/)
+
 # License
 
 
