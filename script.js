@@ -110,6 +110,14 @@ function updateScoreAndCheckWinner(result) {
   }
 }
 
+/** Reset the scores and rounds to 0 */
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  currentRound = 0;
+  displayScore(); // Update the score display after resetting
+}
+
 /** Button for player option "ROCK" */
 const rockButton = document.createElement('button');
 rockButton.textContent = 'ROCK';
@@ -136,3 +144,9 @@ scissorsButton.addEventListener('click', function() {
   console.log('Player chooses SCISSORS!');
 });
 container.appendChild(scissorsButton);
+
+/** Button to reset the game. */
+const playAgainButton = document.createElement('button');
+playAgainButton.textContent = 'Play Again';
+playAgainButton.addEventListener('click', resetGame);
+container.appendChild(playAgainButton);
