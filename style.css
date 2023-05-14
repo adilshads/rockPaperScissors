@@ -32,8 +32,14 @@ body {
     margin-top: 50px; /* Add some margin to create space between the heading and the scenario content */
   }
   
+.images {
+  display: flex;
+  margin-right: 40px;
+}
+
 .image-class {
     max-width: 200px; /* Adjust the value as needed */
     max-height: 200px; /* Adjust the value as needed */
+    margin-right: 40px;
   }
   
