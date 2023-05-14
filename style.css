@@ -4,4 +4,9 @@ body {
     background-repeat: no-repeat;
     background-position: center;
   }
+
+.image-class {
+    max-width: 200px; /* Adjust the value as needed */
+    max-height: 200px; /* Adjust the value as needed */
+  }
   
