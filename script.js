@@ -83,6 +83,7 @@ function playerButtonClick(playerSelection) {
 
 
 /** Displays the score of the player and the computer after every round */
+/** Displays the score of the player and the computer after every round */
 function displayScore(playerSelection, computerSelection) {
   document.getElementById("result").textContent = "Player Score: " + playerScore;
   document.getElementById("result").textContent += " Computer Score: " + computerScore;
@@ -92,21 +93,23 @@ function displayScore(playerSelection, computerSelection) {
   if (currentRound % 5 === 0 && currentRound !== 0) {
     if (playerScore > computerScore) {
       document.getElementById("result").textContent = "You Win, You May Proceed! Player Choice: " +
-      playerSelection + " Computer Choice: " + computerSelection +
-      " - Final Score: Player Score - " + playerScore.toString() +
-      " Computer Score - " + computerScore.toString();
+        playerSelection + " Computer Choice: " + computerSelection +
+        " - Final Score: Player Score - " + playerScore.toString() +
+        " Computer Score - " + computerScore.toString();
       console.log("Player Wins!");
+      displayCoveringImage('img/fantasyPassageEntrance.jpg');
     } else if (playerScore < computerScore) {
       document.getElementById("result").textContent = "You Lose, Try Again! Player Choice: " +
-      playerSelection + " Computer Choice: " + computerSelection +
-      " - Final Score: Player Score - " + playerScore.toString() +
-      " Computer Score - " + computerScore.toString();
+        playerSelection + " Computer Choice: " + computerSelection +
+        " - Final Score: Player Score - " + playerScore.toString() +
+        " Computer Score - " + computerScore.toString();
       console.log("Computer Wins!");
+      displayCoveringImage('img/silhouteInPassage.jpg');
     } else {
       document.getElementById("result").textContent = "It's a Tie, Try Again! Player Choice: " +
-      playerSelection + " Computer Choice: " + computerSelection +
-      " - Final Score: Player Score - " + playerScore.toString() +
-      " Computer Score - " + computerScore.toString();
+        playerSelection + " Computer Choice: " + computerSelection +
+        " - Final Score: Player Score - " + playerScore.toString() +
+        " Computer Score - " + computerScore.toString();
       console.log("It's a Tie!");
     }
   } else {
@@ -116,6 +119,33 @@ function displayScore(playerSelection, computerSelection) {
     console.log(`Computer Choice: ${computerSelection}`);
   }
 }
+
+/** Displays the covering image on the screen for a specified duration */
+function displayCoveringImage(imageSrc, duration) {
+  // Create the image element
+  const image = document.createElement('img');
+  image.src = imageSrc;
+  image.alt = 'Covering Image';
+  image.classList.add('covering-image');
+
+  // Apply CSS styles to cover the entire screen
+  image.style.position = 'fixed';
+  image.style.top = '0';
+  image.style.left = '0';
+  image.style.width = '100%';
+  image.style.height = '100%';
+  image.style.objectFit = 'cover';
+  image.style.zIndex = '9999';
+
+  // Add the image to the body
+  document.body.appendChild(image);
+
+  // Set a timeout to remove the image after the specified duration
+  setTimeout(() => {
+    image.remove();
+  }, duration);
+}
+
 
 /** Keeps track of player score and computer score then declares a winner every 5 rounds */ 
 let playerScore = 0;
@@ -130,22 +160,23 @@ function updateScoreAndCheckWinner(result) {
   }
 
   currentRound++;
-  
+
   if (currentRound % 5 === 0) {
     if (playerScore > computerScore) {
       document.getElementById("result").textContent = "You Win, You May Proceed!";
       console.log("Player Wins!");
+      displayCoveringImage('img/fantasyPassageEntrance.jpg', 5000); // Display covering image for 5 seconds
     } else if (playerScore < computerScore) {
       document.getElementById("result").textContent = "You Lose, Try Again!";
       console.log("Computer Wins!");
+      displayCoveringImage('img/silhouteInPassage.jpg', 5000); // Display covering image for 5 seconds
     } else {
       document.getElementById("result").textContent = "It's a Tie, Try Again!";
       console.log("It's a Tie!");
     }
     
-  console.log(`Player Score: ${playerScore}`);
-  console.log(`Computer Score: ${computerScore}`);
-
+    console.log(`Player Score: ${playerScore}`);
+    console.log(`Computer Score: ${computerScore}`);
   }
 }
 
