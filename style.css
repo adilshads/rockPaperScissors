@@ -58,6 +58,7 @@ body {
     background-color: rgb(19, 14, 14);
     padding: 10px; /* Add padding to create some space around the image */
     display: inline-block; /* Make sure the container wraps around the image */
+    border-radius: 10px;
   }
 
   .button-class {
