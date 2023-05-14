@@ -1,14 +1,27 @@
+.title {
+  margin-top: 20px; /* Adjust the value as needed */
+  font-family: 'Old Standard TT', Helvetica, Arial, sans-serif, serif;
+  
+}
+
+
 body {
     /* Background image */
     background-image: url(img/beatufulDoor.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding: 0;
+    margin: 0;
     /* Center content */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+
+    font-family: 'Old Standard TT', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ 
     
   }
   
@@ -29,7 +42,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 50px; /* Add some margin to create space between the heading and the scenario content */
+    margin-top: 30px; /* Add some margin to create space between the heading and the scenario content */
   }
   
 .images {
