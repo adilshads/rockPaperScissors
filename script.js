@@ -51,7 +51,36 @@ function playerButtonClick(playerSelection) {
   console.log(result);
   updateScoreAndCheckWinner(result);
   displayScore(playerSelection, computerSelection);
+
+  // Remove existing image elements
+  const imagesContainer = document.querySelector('.images');
+  while (imagesContainer.firstChild) {
+    imagesContainer.firstChild.remove();
+  }
+
+  // Create and display the appropriate image based on the player's selection
+  let imageSrc = '';
+  let imageAlt = '';
+
+  if (playerSelection === 'ROCK') {
+    imageSrc = 'img/rockInOcean.jpg';
+    imageAlt = 'Large rock in the edge of the ocean';
+  } else if (playerSelection === 'PAPER') {
+    imageSrc = 'img/parchmentRoll.jpg';
+    imageAlt = 'Two rolled up parchment paper rolls with the images of maps on the outside, tied with brown ribbons, one is standing straight, the other is leaning on it in a 45 degree angle. Black Background.';
+  } else if (playerSelection === 'SCISSORS') {
+    imageSrc = 'img/basicScissors.jpg';
+    imageAlt = 'Basic closed scissors, with black handles and white background';
+  }
+
+  const image = document.createElement('img');
+  image.src = imageSrc;
+  image.alt = imageAlt;
+  image.classList.add('image-class');
+  imagesContainer.appendChild(image);
 }
+
+
 
 /** Displays the score of the player and the computer after every round */
 function displayScore(playerSelection, computerSelection) {
