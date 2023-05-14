@@ -54,6 +54,10 @@ body {
     max-width: 200px; /* Adjust the value as needed */
     max-height: 200px; /* Adjust the value as needed */
     margin-right: 40px;
+    border-radius: 10px; /* Adjust the value as per your preference */
+    background-color: rgb(19, 14, 14);
+    padding: 10px; /* Add padding to create some space around the image */
+    display: inline-block; /* Make sure the container wraps around the image */
   }
 
   .button-class {
