@@ -21,9 +21,7 @@ body {
     /* Font */
     font-family: 'Old Standard TT', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color:###000080;
- 
-    
-  }
+}
   
 #container {
     display: flex;
