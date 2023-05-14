@@ -9,7 +9,7 @@ game for user.
 
 # Build Status
 
-Developing userinterface!
+Styling Page
 
 # Code Style
 
