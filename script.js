@@ -129,35 +129,38 @@ function resetGame() {
   document.getElementById("result").textContent = "New Match!";
 }
 
+
+/** Function that styles buttons */
+
+function createStyledButton(text, onClick) {
+  const button = document.createElement('button');
+  button.textContent = text;
+  button.addEventListener('click', onClick);
+  button.classList.add('button-class');
+  return button;
+}
+
 /** Button for player option "ROCK" */
-const rockButton = document.createElement('button');
-rockButton.textContent = 'ROCK';
-rockButton.addEventListener('click', function() {
-  playerButtonClick("ROCK");
+const rockButton = createStyledButton('ROCK', () => {
+  playerButtonClick('ROCK');
   console.log('Player chooses ROCK!');
 });
 container.appendChild(rockButton);
 
 /** Button for player option "PAPER" */
-const paperButton = document.createElement('button');
-paperButton.textContent = 'PAPER';
-paperButton.addEventListener('click', function() {
-  playerButtonClick("PAPER");
+const paperButton = createStyledButton('PAPER', () => {
+  playerButtonClick('PAPER');
   console.log('Player chooses PAPER!');
 });
 container.appendChild(paperButton);
 
 /** Button for player option "SCISSORS" */
-const scissorsButton = document.createElement('button');
-scissorsButton.textContent = 'SCISSORS';
-scissorsButton.addEventListener('click', function() {
-  playerButtonClick("SCISSORS");
+const scissorsButton = createStyledButton('SCISSORS', () => {
+  playerButtonClick('SCISSORS');
   console.log('Player chooses SCISSORS!');
 });
 container.appendChild(scissorsButton);
 
 /** Button to reset the game. */
-const playAgainButton = document.createElement('button');
-playAgainButton.textContent = 'Play Again';
-playAgainButton.addEventListener('click', resetGame);
+const playAgainButton = createStyledButton('Play Again', resetGame);
 container.appendChild(playAgainButton);
