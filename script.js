@@ -44,7 +44,7 @@ const container = document.querySelector('#container');
 
 /* Takes value player selection according to the button the user clicked, then 
 runs the play() function to compare the choice to the computerSelection and 
-declare who won the round */ 
+declare who won the round. Display image correlating to player choice on screen. */ 
 function playerButtonClick(playerSelection) {
   const computerSelection = getComputerChoice();
   const result = play(playerSelection, computerSelection);
@@ -149,14 +149,42 @@ function updateScoreAndCheckWinner(result) {
   }
 }
 
-/** Reset the scores and rounds to 0 */
+/** Reset the scores and rounds to 0, and return pictures to screen. */
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
   currentRound = 0;
   displayScore(); // Update the score display after resetting
+
+  // Remove existing image elements
+  const imagesContainer = document.querySelector('.images');
+  while (imagesContainer.firstChild) {
+    imagesContainer.firstChild.remove();
+  }
+
+  // Recreate and display the original images
+  const rockImage = document.createElement('img');
+  rockImage.src = 'img/rockInOcean.jpg';
+  rockImage.alt = 'Large rock in the edge of the ocean';
+  rockImage.classList.add('image-class');
+  imagesContainer.appendChild(rockImage);
+
+  const parchmentImage = document.createElement('img');
+  parchmentImage.src = 'img/parchmentRoll.jpg';
+  parchmentImage.alt = 'Two rolled up parchment paper rolls with the images of maps on the outside, tied with brown ribbons, one is standing straight, the other is leaning on it in a 45 degree angle. Black Background.';
+  parchmentImage.classList.add('image-class');
+  imagesContainer.appendChild(parchmentImage);
+
+  const scissorsImage = document.createElement('img');
+  scissorsImage.src = 'img/basicScissors.jpg';
+  scissorsImage.alt = 'Basic closed scissors, with black handles and white background';
+  scissorsImage.classList.add('image-class');
+  imagesContainer.appendChild(scissorsImage);
+
+  // Update the message to "New Match!"
   document.getElementById("result").textContent = "New Match!";
 }
+
 
 
 /** Function that styles buttons */
