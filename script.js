@@ -1,3 +1,12 @@
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+  var blackScreen = document.getElementById("black-screen");
+
+  setTimeout(function() {
+    blackScreen.remove();
+  }, 15000);
+});
+
 /** Create a function that prompts the computer to randomly generate an answer between Rock,
  * Paper and Scissors
  */
@@ -80,9 +89,6 @@ function playerButtonClick(playerSelection) {
   imagesContainer.appendChild(image);
 }
 
-
-
-/** Displays the score of the player and the computer after every round */
 /** Displays the score of the player and the computer after every round */
 function displayScore(playerSelection, computerSelection) {
   document.getElementById("result").textContent = "Player Score: " + playerScore;
