@@ -9,7 +9,7 @@ game for user.
 
 # Build Status
 
-Styling Page
+Project Complete
 
 # Code Style
 
@@ -23,6 +23,16 @@ The JavaScript code in this project follows a consistent coding style to ensure 
 - Descriptive variable and function names are used to enhance code clarity.
 
 # Screenshots
+
+![Opening Scene](img/openingScreen.png)
+
+![Game Screen](img/gameScreen.png)
+
+![Playing Screen](img/playingScreen.png)
+
+![End Game Screen](img/endGameScreen.png)
+
+
 
 # Tech/Framework used
 
@@ -38,6 +48,7 @@ The JavaScript code in this project follows a consistent coding style to ensure 
 - Score tracking: The player's and computer's scores are updated and displayed after each round.
 - Best of 5 rounds: The winner of the best-of-five rounds is declared at the end of every 5 rounds.
 - Responsive design: The user interface adapts to different screen sizes, providing a consistent experience across devices.
+
 # Code Examples
 
 // Example 1: Function to prompt the computer for a random choice
@@ -76,9 +87,39 @@ rockButton.textContent = 'ROCK';
 
 # API reference
 
+No API References
+
 # Tests
 
 # How to Use? 
+
+1. Access the Game: You can play the Rock Paper Scissors game by visiting the following URL: https://adilshads.github.io/rockPaperScissors/   OR Launch the game by opening the index.html file in your web browser.
+
+2. Follow the instructions outlined below to enjoy the game.
+
+3. Game Rules: The game follows the classic rules of Rock Paper Scissors:
+
+   Rock beats Scissors
+   Paper beats Rock
+   Scissors beats Paper
+   User Interface: The game interface consists of three buttons representing the player's choices: Rock, Paper, and Scissors.
+
+4. Making a Choice: Click on the button corresponding to your choice for each round. You can choose either Rock, Paper, or Scissors.
+
+5. Computer's Choice: After you make your selection, the computer will randomly choose its own option.
+
+6. Determining the Winner: The game will compare your choice with the computer's choice and determine the winner of the round based on the game rules mentioned above.
+
+7. Score Tracking: The player's score and the computer's score will be updated and displayed after each round.
+
+8. Best-of-Five Rounds: The game follows a best-of-five rounds format. The first player to win three rounds will be declared the winner of the game.
+
+9. Displaying the Winner: At the end of every five rounds, the game will display the winner and reset the scores for a new game.
+
+10. Play Again: To play again, simply click on your desired choice for the next round. The game will continue until one player reaches the best-of-five rounds victory or you choose to refresh the page.
+
+11. Enjoy the Game: Have fun playing Rock Paper Scissors!
+
 
 # Contribute
 
