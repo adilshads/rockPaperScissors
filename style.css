@@ -19,8 +19,11 @@ body {
     justify-content: center;
     
     /* Font */
-    font-family: 'Old Standard TT', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color:###000080;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: silver;
+
+  
 }
 
 #black-screen {
