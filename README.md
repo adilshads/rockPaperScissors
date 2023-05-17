@@ -26,7 +26,7 @@ The JavaScript code in this project follows a consistent coding style to ensure 
 
 ![Opening Scene](img/openingScreen.png)
 
-![Game Screen](img/gameScreen.png)
+![Game Screen](img/gameScreen2.png)
 
 ![Playing Screen](img/playingScreen.png)
 
